@@ -100,5 +100,7 @@ SELECT
     SUM(t2.amount) - t1.month AS result
 FROM table_2 t2
 LEFT JOIN table_1 t1 on t1.id = t2.id
-GROUP BY t2.id, t1.month
-;
+GROUP BY t2.id, t1.month ;
+
+-- ''' немає опису як рахувати різницю для рядків ID яких відсутні в table_1
+-- тому result залишається як <null>'''
